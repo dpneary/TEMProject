@@ -25,26 +25,6 @@ npm install
 npm run dev
 ```
 
-### Windows setup (PowerShell)
-
-1. Install **Node.js 18+** (includes npm): https://nodejs.org/
-2. Open **PowerShell** in the project folder.
-3. Run:
-
-```powershell
-npm install
-npm run dev
-```
-
-4. Open the URL shown in the terminal (typically `http://localhost:5173`).
-
-Optional production build on Windows:
-
-```powershell
-npm run build
-npm run preview
-```
-
 Build preview:
 
 ```bash
