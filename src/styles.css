@@ -1,0 +1,98 @@
+:root {
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  color: #e2e8f0;
+  background: #020617;
+}
+* { box-sizing: border-box; }
+body { margin: 0; }
+
+.appShell {
+  display: grid;
+  grid-template-columns: 280px 1fr 290px;
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #0f172a, #020617 55%);
+}
+
+.panel {
+  padding: 1rem;
+  border-right: 1px solid #1e293b;
+  background: #0b1220;
+}
+.panel:last-child {
+  border-right: none;
+  border-left: 1px solid #1e293b;
+}
+h1 { margin: 0; font-size: 1.1rem; }
+h2 { margin-top: 0; }
+h3 { margin: 1rem 0 0.5rem; }
+
+label, fieldset {
+  display: block;
+  margin-bottom: 0.8rem;
+  font-size: 0.9rem;
+}
+legend { margin-bottom: 0.4rem; }
+select, button {
+  width: 100%;
+  margin-top: 0.3rem;
+  padding: 0.45rem;
+  border-radius: 8px;
+  border: 1px solid #334155;
+  background: #111827;
+  color: #e2e8f0;
+}
+button { background: #0284c7; border: none; font-weight: 600; }
+button.ghost { background: #334155; }
+.buttonRow { display: grid; grid-template-columns: 1fr 1fr; gap: 0.4rem; }
+.radioRow, .checkboxRow { display: flex; gap: 0.5rem; align-items: center; }
+
+.mainPanel { padding: 1rem; }
+.etaSummary {
+  background: #0b1220;
+  border: 1px solid #1e293b;
+  border-radius: 12px;
+  padding: 0.8rem 1rem;
+  margin-bottom: 0.8rem;
+}
+.etaMetrics {
+  margin-top: 0.7rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.8rem;
+}
+.metric { background: #111827; border-radius: 10px; padding: 0.55rem; }
+.metric small { display: block; color: #94a3b8; }
+
+.mapWrap {
+  background: #0b1220;
+  border: 1px solid #1e293b;
+  border-radius: 12px;
+  padding: 0.6rem;
+}
+.mapSvg { width: 100%; height: 76vh; }
+.mapLabel { fill: #e2e8f0; font-size: 18px; }
+.mapSublabel { fill: #94a3b8; font-size: 12px; }
+.gateLabel { fill: #bfdbfe; font-size: 10px; }
+.incidentMark { fill: white; font-weight: 700; }
+
+.cards { display: grid; gap: 0.5rem; }
+.conditionCard { background: #111827; border-radius: 10px; padding: 0.65rem; position: relative; }
+.conditionCard p { margin: 0; color: #93c5fd; font-size: 0.85rem; }
+.conditionCard strong { display: block; margin-top: 0.3rem; }
+.trend { position: absolute; right: 0.7rem; top: 0.7rem; font-size: 1.1rem; }
+.trend.up { color: #fb7185; }
+.trend.down { color: #4ade80; }
+.trend.flat { color: #fbbf24; }
+.eventFeed { margin: 0; padding-left: 1rem; display: grid; gap: 0.35rem; font-size: 0.83rem; color: #cbd5e1; }
+
+.toast {
+  position: fixed;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  background: #0ea5e9;
+  color: #082f49;
+  font-weight: 700;
+}
