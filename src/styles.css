@@ -1,0 +1,148 @@
+:root {
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  color: #e2e8f0;
+  background: #020617;
+}
+* { box-sizing: border-box; }
+body { margin: 0; }
+
+.appShell {
+  display: grid;
+  grid-template-columns: 300px 1fr 300px;
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #0f172a, #020617 55%);
+}
+
+.panel {
+  padding: 1rem;
+  border-right: 1px solid #1e293b;
+  background: #0b1220;
+  overflow-y: auto;
+}
+.panel:last-child {
+  border-right: none;
+  border-left: 1px solid #1e293b;
+}
+
+h1 { margin: 0; font-size: 1.18rem; }
+h2 { margin: 0; }
+h3 { margin: 1rem 0 0.5rem; }
+.subtle { color: #94a3b8; font-size: 0.83rem; margin: 0.35rem 0 0.9rem; }
+
+label, fieldset {
+  display: block;
+  margin-bottom: 0.8rem;
+  font-size: 0.9rem;
+}
+legend { margin-bottom: 0.4rem; }
+select, button {
+  width: 100%;
+  margin-top: 0.3rem;
+  padding: 0.5rem;
+  border-radius: 8px;
+  border: 1px solid #334155;
+  background: #111827;
+  color: #e2e8f0;
+}
+button {
+  background: linear-gradient(90deg, #0284c7, #2563eb);
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+button:hover { filter: brightness(1.1); }
+button.ghost { background: #334155; }
+
+.buttonRow { display: grid; grid-template-columns: 1fr 1fr; gap: 0.4rem; }
+.radioRow, .checkboxRow { display: flex; gap: 0.55rem; align-items: flex-start; }
+.radioRow small { display: block; color: #94a3b8; font-size: 0.75rem; }
+
+.mainPanel { padding: 1rem; }
+.etaSummary {
+  background: #0b1220;
+  border: 1px solid #1e293b;
+  border-radius: 12px;
+  padding: 0.9rem 1rem;
+  margin-bottom: 0.8rem;
+}
+.summaryHeading { display: flex; align-items: center; gap: 0.45rem; flex-wrap: wrap; }
+.chip {
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  background: #155e75;
+  color: #cffafe;
+  font-size: 0.75rem;
+  border: 1px solid #0891b2;
+}
+.chip.soft { background: #1f2937; color: #cbd5e1; border-color: #334155; }
+.hint { margin: 0.7rem 0 0; font-size: 0.82rem; color: #cbd5e1; }
+
+.etaMetrics {
+  margin-top: 0.7rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.8rem;
+}
+.metric { background: #111827; border-radius: 10px; padding: 0.55rem; border: 1px solid #243041; }
+.metric small { display: block; color: #94a3b8; }
+
+.mapWrap {
+  background: #0b1220;
+  border: 1px solid #1e293b;
+  border-radius: 12px;
+  padding: 0.6rem;
+}
+.mapLegend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  font-size: 0.78rem;
+  color: #cbd5e1;
+  margin: 0.15rem 0 0.45rem;
+}
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  display: inline-block;
+  margin-right: 0.3rem;
+}
+.dot.green { background: #22c55e; }
+.dot.yellow { background: #f59e0b; }
+.dot.red { background: #f43f5e; }
+.dot.cyan { background: #5eead4; }
+
+.mapSvg { width: 100%; height: 72vh; }
+.mapLabel { fill: #e2e8f0; font-size: 18px; }
+.mapSublabel { fill: #94a3b8; font-size: 12px; }
+.gateLabel { fill: #bfdbfe; font-size: 10px; }
+.incidentMark { fill: white; font-weight: 700; }
+
+.cards { display: grid; gap: 0.5rem; }
+.conditionCard { background: #111827; border-radius: 10px; padding: 0.65rem; position: relative; border: 1px solid #243041; }
+.conditionCard p { margin: 0; color: #93c5fd; font-size: 0.85rem; }
+.conditionCard strong { display: block; margin-top: 0.3rem; }
+.trend { position: absolute; right: 0.7rem; top: 0.7rem; font-size: 1.1rem; }
+.trend.up { color: #fb7185; }
+.trend.down { color: #4ade80; }
+.trend.flat { color: #fbbf24; }
+.eventFeed { margin: 0; padding-left: 1rem; display: grid; gap: 0.35rem; font-size: 0.83rem; color: #cbd5e1; }
+
+.toast {
+  position: fixed;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  background: #0ea5e9;
+  color: #082f49;
+  font-weight: 700;
+  box-shadow: 0 8px 30px rgba(14, 165, 233, 0.35);
+}
+
+@media (max-width: 1200px) {
+  .appShell { grid-template-columns: 1fr; }
+  .panel, .panel:last-child { border: none; border-bottom: 1px solid #1e293b; }
+  .mapSvg { height: 58vh; }
+}
